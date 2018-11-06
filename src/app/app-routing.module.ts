@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CarreteComponent } from './carrete/carrete.component';
+import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { CarreteComponent } from './carrete/carrete.component';
 
 
 const appRoutes: Routes = [
@@ -17,8 +18,10 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
+    CommonModule,
     RouterModule.forRoot(appRoutes)
   ],
+  exports: [ RouterModule],
   declarations: []
 })
 export class AppRoutingModule { }
