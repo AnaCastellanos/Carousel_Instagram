@@ -7,9 +7,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HttpModule} from '@angular/http';
-import {InstagramService} from './instagram.service';
+import {InstagramChrisService} from './instagram-chris.service';
 import { AppRoutingModule } from './app-routing.module';
-// import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -25,9 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     NgbModule,
     HttpModule,
     AppRoutingModule,
-    // AppRoutingModule
   ],
-  providers: [InstagramService],
+  providers: [InstagramChrisService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

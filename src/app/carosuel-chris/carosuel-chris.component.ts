@@ -1,5 +1,5 @@
 import { Component,  } from '@angular/core';
-import {InstagramService} from '../instagram.service';
+import {InstagramChrisService} from '../instagram-chris.service';
 @Component({
   selector: 'app-carosuel-chris',
   templateUrl: './carosuel-chris.component.html',
@@ -9,7 +9,7 @@ export class CarosuelComponent{
   images = [1, 2, 3, 4, 5, 6].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
   image2: string [] = [];
 
-  constructor(public instaService: InstagramService) {
+  constructor(public instaService: InstagramChrisService) {
     this.getImages();
   }
 

@@ -3,7 +3,7 @@ import {map} from 'rxjs/operators';
 import {Injectable} from '@angular/core';
 
 @Injectable()
-export class InstagramService {
+export class InstagramChrisService {
   private apiUrl = 'https://api.instagram.com/v1/users/self/media/recent/?access_token=7178834128.4c08053.167617dceb924381bd8606509a2ad0f1';
   data: any = {};
 
