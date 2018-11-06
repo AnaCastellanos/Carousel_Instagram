@@ -1,6 +1,7 @@
 import {Http, Response} from '@angular/http';
 import {map} from 'rxjs/operators';
 import {Injectable} from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class InstagramService{
@@ -12,7 +13,7 @@ export class InstagramService{
     this.importData();
   }
 
-  getData() {
+  getData(): Observable<any> {
     return this.http.get(this.apiUrl)
       .pipe(map ((res: Response) => res.json()));
   }
