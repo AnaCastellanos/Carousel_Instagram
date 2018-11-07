@@ -7,11 +7,11 @@ import { CarreteComponent } from './carrete/carrete.component';
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/carrete',
+    redirectTo: '/chris',
     pathMatch: 'full'
   },
   {
-    path: 'carrete',
+    path: 'chris',
     component: CarreteComponent
   }
 ];

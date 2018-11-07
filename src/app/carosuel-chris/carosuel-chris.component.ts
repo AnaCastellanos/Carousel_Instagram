@@ -6,18 +6,17 @@ import {InstagramChrisService} from '../instagram-chris.service';
   styleUrls: ['./carosuel-chris.component.css']
 })
 export class CarosuelComponent{
-  images = [1, 2, 3, 4, 5, 6].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
-  image2: string [] = [];
+  images: string [] = [];
 
   constructor(public instaService: InstagramChrisService) {
     this.getImages();
   }
 
-  getImages() {
+  getImages() { //Método
     this.instaService.getData().subscribe(data => {
-      for (let i = 0; i < 8; i++) {
-        this.image2[i] = data.data[i].images.standard_resolution.url;
-      }
-    });
+      for (let image of data.data)
+        this.images.push(image);
+    }, error => console.log(error));
   }
+
 }
