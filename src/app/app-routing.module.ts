@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 import {CarreteComponent} from './carrete/carrete.component';
+import {CarouselComponent} from './carousel-jorge/carousel.component';
 
 
 const appRoutes: Routes = [
@@ -12,6 +13,10 @@ const appRoutes: Routes = [
   {
     path: 'carrete',
     component: CarreteComponent
+  },
+  {
+    path: 'jorge',
+    component: CarouselComponent
   }
 ];
 
