@@ -1,0 +1,11 @@
+<div class="centerslide">
+<div class="slider">
+  <ngb-carousel *ngIf="images.length > 0">
+    <ng-template *ngFor="let image of images" ngbSlide>
+      <img src="{{image.images.standard_resolution.url}}" alt="Random first slide">
+    </ng-template>
+  </ngb-carousel>
+</div>
+<br><br>
+  <button class="btn btn-primary" routerLink="">Regresar</button>
+</div>

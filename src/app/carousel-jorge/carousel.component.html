@@ -1,0 +1,17 @@
+<div class="sliderJorge">
+<div class="slider">
+<ngb-carousel *ngIf="images.length > 0">
+  <ng-template *ngFor="let image of images" ngbSlide>
+    <img src="{{image.images.standard_resolution.url}}" alt="Random first slide">
+    <div class="carousel-caption">
+      <h3></h3>
+      <p *ngIf="image.caption">{{image.caption.text}}</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+</div>
+
+  <br><br>
+  <button class="btn btn-outline-success" routerLink="">Atrás</button>
+</div>
+
